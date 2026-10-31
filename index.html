@@ -1,485 +1,499 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-  content="width=device-widht,
-      initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Ika Eftiana, mahasiswa Teknik Informatika.">
     <title>Portofolio Ika Eftiana</title>
-  
-   <link rel="stylesheet"
-     href="style.css">
-  </head>
 
-  <bod>
+    <script>
+        // Terapkan tema sebelum halaman tampil agar tidak berkedip
+        (function () {
+            document.documentElement.classList.add("js");
+            try {
+                var saved = localStorage.getItem("theme");
+                if (saved === "light" || saved === "dark") {
+                    document.documentElement.setAttribute("data-theme", saved);
+                }
+            } catch (e) { }
+        })();
+    </script>
 
-    <!--NAVBAR-->
-    <header>
-    <nav>
-        <div class="logo">IKA</div>
-        <button class="dark-button" onclick="toggleDarkMode()">🌙</button>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
+<body>
 
-        <div class="menu" id="menu">
-            <a href="#home" onclick="toggleMenu()">Home</a>
-            <a href="#about" onclick="toggleMenu()">About Me</a>
-            <a href="#journey" onclick="toggleMenu()">Journey</a>
-            <a href="#projects" onclick="toggleMenu()">Projects</a>
-            <a href="#gallery" onclick="toggleMenu()">Gallery</a>
-            <a href="#contact" onclick="toggleMenu()">Contact</a>
-        </div>
-    </nav>
+    <!-- ================= NAVBAR ================= -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#home" class="logo" aria-label="Ke atas">IKA</a>
+
+            <div class="menu" id="menu">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#journey">Journey</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-button" id="themeButton" type="button" aria-label="Ganti tema">☀️</button>
+                <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Buka menu"
+                    aria-expanded="false" aria-controls="menu">☰</button>
+            </div>
+        </nav>
     </header>
 
-    <!-- HOME -->
-<section id="home" class="home">
+    <main>
 
-    <div class="home-text">
+        <!-- ================= HOME ================= -->
+        <section id="home" class="home">
 
-        <p class="small-text">
-            WELCOME TO MY PORTFOLIO
-        </p>
+            <div class="home-text">
+                <p class="small-text">WELCOME TO MY PORTFOLIO</p>
 
-        <h1>
-            Hi, I'm <span>Ika Eftiana</span>
-        </h1>
+                <h1>Hi, I'm <span>Ika Eftiana</span></h1>
 
-        <p>
-            Mahasiswa Teknik Informatika yang sedang belajar,
-            berkembang, dan mencoba hal-hal baru.
-        </p>
-
-        <a href="#about" class="button">
-            About Me →
-        </a>
-
-    </div>
-
-    <div class="home-photo">
-
-        <div class="photo-decoration">
-            ✦
-        </div>
-
-        <div class="photo-placeholder">
-    <img src="img.png" alt="Foto Ika">
-        </div>
-
-        <div class="photo-star">
-            ✧
-        </div>
-
-    </>
-
-</section>
-
-    <!--ABOUT-->
-<section id="about" class="section">
-
-    <p class="section-label">ABOUT ME</p>
-
-    <h2>Kenalan lebih dekat<br>dengan saya.</h2>
-
-    <p class="about-text">
-        Halo! Saya Ika Eftiana, mahasiswa Teknik Informatika
-        yang sedang memulai perjalanan di dunia teknologi.
-        Website ini menjadi tempat untuk menyimpan perjalanan,
-        pengalaman, karya, dan berbagai pencapaian saya.
-    </p>
-
-    <div class="about-info">
-
-        <div class="info-card">
-            <span>🎓</span>
-            <div>
-                <h3>Education</h3>
-                <p>Mahasiswa Teknik Informatika</p>
-            </div>
-        </div>
-
-        <div class="info-card">
-            <span>🌱</span>
-            <div>
-                <h3>Currently Learning</h3>
-                <p>
-                    Memulai dan mengembangkan kemampuan
-                    di dunia teknologi.
-                </p>
-            </div>
-        </div>
-
-        <div class="info-card">
-            <span>✨</span>
-            <div>
-                <h3>My Goal</h3>
-                <p>
-                    Terus belajar, berkembang,
-                    dan menghasilkan karya.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-  <!--JOURNEY-->
-    <section id="journey" class="section">
-    <p class="section-label">MY JOURNEY</p>
-
-    <h2>Perjalanan pendidikan saya.</h2>
-
-    <p class="journey-intro">
-        Setiap tahap pendidikan menjadi bagian dari perjalanan
-        saya untuk terus belajar, berkembang, dan mencoba hal-hal baru.
-    </p>
-
-    <div class="journey-list">
-
-        <!-- PENDIDIKAN 01 -->
-        <div class="journey-card">
-
-            <div class="journey-number">
-                01
-            </div>
-
-            <div class="journey-content">
-
-                <span class="journey-year">
-                    PENDIDIKAN SEBELUMNYA
-                </span>
-
-                <h3>SMKN 6 Bandar Lampung</h3>
-
-                <p class="journey-major">
-                    Teknik Komputer dan Jaringan (TKJ)
+                <p class="home-desc">
+                    Mahasiswa Teknik Informatika yang sedang belajar,
+                    berkembang, dan mencoba hal-hal baru.
                 </p>
 
-                <p>
-                    Selama menempuh pendidikan di SMKN 6 Bandar Lampung,
-                    saya mendapatkan berbagai pengetahuan dan pengalaman
-                    di bidang teknologi, seperti jaringan komputer,
-                    subnetting, MikroTik, Microsoft Office, hingga
-                    perakitan dan bongkar pasang PC.
-                </p>
-
-                <p>
-                    Selain kegiatan akademik, saya juga aktif mengikuti
-                    berbagai kegiatan dan ekstrakurikuler, seperti Rohis,
-                    Karate, Pramuka, dan seni tari. Saya juga berkesempatan
-                    mengikuti kegiatan KKRI di Lanal Lampung.
-                </p>
-
-                <p>
-                    Momen bersama teman-teman seperti Madabintal,
-                    kegiatan kemah Pramuka hingga menjadi Bantara,
-                    serta mengikuti lomba senam P5 menjadi beberapa
-                    kenangan yang paling berkesan selama masa sekolah.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- PENDIDIKAN 02 -->
-        <div class="journey-card">
-
-            <div class="journey-number">
-                02
-            </div>
-
-            <div class="journey-content">
-
-                <span class="journey-year">
-                    2026 — SEKARANG
-                </span>
-
-                <h3>Institut Informatika dan Bisnis Darmajaya</h3>
-
-                <p class="journey-major">
-                    Teknik Informatika
-                </p>
-
-                <p>
-                    Memulai perjalanan baru di dunia Teknik Informatika,
-                    belajar berbagai hal tentang teknologi, dan terus
-                    mengembangkan kemampuan melalui pengalaman baru.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-    </section>
-    
-
-    <!--PROJECTS-->
-    <section id="projects" class="section">
-
-      <p class="section-label">PROJECTS</p>
-       <h2>Karya & Project.</h2>
-
-      <p>
-        Project yang pernah saya kerjakan akan ditampilkan di sini.
-      </p>
-
-      <div class="project-card">
-        <h3>Coming Soon</h3>
-        <p>
-          Sedang dalam proses belajar dan membuat project pertama.
-        </p>
-      </div>
-    </section>
-
-    <!--GALLERY-->
-    <section id="gallery" class="section">
-    <p class="section-label">GALLERY</p>
-
-    <h2>My memories & achievements.</h2>
-
-    <p>
-        Kumpulan sertifikat, prestasi, kegiatan,
-        dan momen-momen berharga dalam perjalanan saya.
-    </p>
-
-    <div class="gallery-list">
-
-        <!-- SERTIFIKAT PRESTASI -->
-        <div class="gallery-card">
-            <div class="gallery-photo">
-                <img src="mtk-emas.jpeg" alt="Sertifikat Medali Emas Matematika">
-            </div>
-            <div class="gallery-content">
-                <span>PRESTASI</span>
-                <h3>Medali Emas — Matematika</h3>
-                <p>Airlangga Competition 11 — Tingkat Nasional, 2025.</p>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <div class="gallery-photo">
-                <img src="b.indo-emas.jpeg" alt="Sertifikat Medali Emas Bahasa Indonesia">
-            </div>
-            <div class="gallery-content">
-                <span>PRESTASI</span>
-                <h3>Medali Emas — Bahasa Indonesia</h3>
-                <p>Airlangga Competition 11 — Tingkat Nasional, 2025.</p>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <div class="gallery-photo">
-                <div class="gallery-photo">
-    <img src="mtkperak.jpg" alt="Sertifikat Medali Perak Matematika">
+                <div class="home-buttons">
+                    <a href="#about" class="button">About Me →</a>
+                    <a href="#contact" class="button button-outline">Contact</a>
                 </div>
+
+                <ul class="home-tags">
+                    <li>Teknik Informatika</li>
+                    <li>Jaringan Komputer</li>
+                    <li>C Programming</li>
+                </ul>
             </div>
-            <div class="gallery-content">
-                <span>PRESTASI</span>
-                <h3>Medali Perak — Matematika</h3>
-                <p>Golden Student Olympiad — Tingkat Nasional, 2025.</p>
+
+            <div class="home-photo">
+                <span class="photo-decoration">✦</span>
+                <div class="photo-placeholder">
+                    <img src="img.png" alt="Foto Ika">
+                </div>
+                <span class="photo-star">✧</span>
             </div>
-        </div>
 
-        <!-- SERTIFIKASI -->
-        <div class="gallery-card">
-            <div class="gallery-photo">
-                <img src="bnsp.jpeg" alt="Sertifikat Uji Kompetensi">
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section">
+
+            <div class="section-head">
+                <p class="section-label">ABOUT ME</p>
+                <h2>Kenalan lebih dekat<br>dengan saya.</h2>
+                <p class="section-intro">
+                    Halo! Saya Ika Eftiana, mahasiswa Teknik Informatika
+                    yang sedang memulai perjalanan di dunia teknologi.
+                    Website ini menjadi tempat untuk menyimpan perjalanan,
+                    pengalaman, karya, dan berbagai pencapaian saya.
+                </p>
             </div>
-            <div class="gallery-content">
-                <span>SERTIFIKASI</span>
-                <h3>Teknisi Madya Jaringan Komputer</h3>
-                <p>Uji Kompetensi dari BNSP, 2026.</p>
+
+            <div class="about-info">
+
+                <div class="info-card">
+                    <span class="icon-box">🎓</span>
+                    <h3>Education</h3>
+                    <p>Mahasiswa Teknik Informatika</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="icon-box">🌱</span>
+                    <h3>Currently Learning</h3>
+                    <p>Memulai dan mengembangkan kemampuan di dunia teknologi.</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="icon-box">✨</span>
+                    <h3>My Goal</h3>
+                    <p>Terus belajar, berkembang, dan menghasilkan karya.</p>
+                </div>
+
             </div>
-        </div>
 
-        <div class="gallery-card">
-            <div class="gallery-photo">
-                <img src="binus.jpeg" alt="Sertifikat Binus Ekskul">
+        </section>
+
+        <!-- ================= JOURNEY ================= -->
+        <section id="journey" class="section">
+
+            <div class="section-head">
+                <p class="section-label">MY JOURNEY</p>
+                <h2>Perjalanan pendidikan saya.</h2>
+                <p class="section-intro">
+                    Setiap tahap pendidikan menjadi bagian dari perjalanan
+                    saya untuk terus belajar, berkembang, dan mencoba hal-hal baru.
+                </p>
             </div>
-            <div class="gallery-content">
-                <span>PEMBELAJARAN</span>
-                <h3>BINUS Online Ekskul — C Programming</h3>
-                <p>Kegiatan pembelajaran dasar pemrograman C, 2026.</p>
+
+            <div class="journey-list">
+
+                <article class="journey-card">
+                    <div class="journey-number">01</div>
+
+                    <div class="journey-content">
+                        <span class="journey-year">PENDIDIKAN SEBELUMNYA</span>
+                        <h3>SMKN 6 Bandar Lampung</h3>
+                        <p class="journey-major">Teknik Komputer dan Jaringan (TKJ)</p>
+
+                        <p>
+                            Selama menempuh pendidikan di SMKN 6 Bandar Lampung,
+                            saya mendapatkan berbagai pengetahuan dan pengalaman
+                            di bidang teknologi, seperti jaringan komputer,
+                            subnetting, MikroTik, Microsoft Office, hingga
+                            perakitan dan bongkar pasang PC.
+                        </p>
+
+                        <p>
+                            Selain kegiatan akademik, saya juga aktif mengikuti
+                            berbagai kegiatan dan ekstrakurikuler, seperti Rohis,
+                            Karate, Pramuka, dan seni tari. Saya juga berkesempatan
+                            mengikuti kegiatan KKRI di Lanal Lampung.
+                        </p>
+
+                        <p>
+                            Momen bersama teman-teman seperti Madabintal,
+                            kegiatan kemah Pramuka hingga menjadi Bantara,
+                            serta mengikuti lomba senam P5 menjadi beberapa
+                            kenangan yang paling berkesan selama masa sekolah.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="journey-card">
+                    <div class="journey-number">02</div>
+
+                    <div class="journey-content">
+                        <span class="journey-year">2026 — SEKARANG</span>
+                        <h3>Institut Informatika dan Bisnis Darmajaya</h3>
+                        <p class="journey-major">Teknik Informatika</p>
+
+                        <p>
+                            Memulai perjalanan baru di dunia Teknik Informatika,
+                            belajar berbagai hal tentang teknologi, dan terus
+                            mengembangkan kemampuan melalui pengalaman baru.
+                        </p>
+                    </div>
+                </article>
+
             </div>
-        </div>
+        </section>
 
-        <!-- KEGIATAN -->
-        <div class="gallery-card">
-            <div class="gallery-photo">
-                <img src="kegiatan.jpg" alt="Foto Kegiatan">
+        <!-- ================= PROJECTS ================= -->
+        <section id="projects" class="section">
+
+            <div class="section-head">
+                <p class="section-label">PROJECTS</p>
+                <h2>Karya &amp; Project.</h2>
+                <p class="section-intro">
+                    Project yang pernah saya kerjakan akan ditampilkan di sini.
+                </p>
             </div>
-            <div class="gallery-content">
-                <span>MEMORIES</span>
-                <h3>Kegiatan & Pengalaman</h3>
-                <p>Berbagai momen berharga selama masa sekolah.</p>
+
+            <div class="project-card">
+                <h3>Coming Soon</h3>
+                <p>Sedang dalam proses belajar dan membuat project pertama.</p>
             </div>
-        </div>
 
-    </div>
-</section>
+        </section>
 
-    <!--CONTACT-->
-    <section id="contact" class="section">
-    <p class="section-label">CONTACT</p>
-    <h2>Let's connect.</h2>
-    <p>
-        Kalau ingin terhubung atau mengenal saya lebih dekat,
-        kamu bisa menghubungi saya melalui email atau Instagram.
-    </p>
+        <!-- ================= GALLERY ================= -->
+        <section id="gallery" class="section">
 
-    <div class="contact-card">
-            <span>✉️</span>
-            <div>
-                <small>EMAIL</small>
-                <h3>ikaeftiana871@gmail.com</h3>
+            <div class="section-head">
+                <p class="section-label">GALLERY</p>
+                <h2>My memories &amp; achievements.</h2>
+                <p class="section-intro">
+                    Kumpulan sertifikat, prestasi, kegiatan,
+                    dan momen-momen berharga dalam perjalanan saya.
+                </p>
             </div>
-        </>
 
-        <a href="https://instagram.com/ika_eftiana"
-           target="_blank"
-           class="contact-card">
-            <span>📷</span>
-            <div>
-                <small>INSTAGRAM</small>
-                <h3>@ika_eftiana</h3>
+            <div class="gallery-list">
+
+                <article class="gallery-card">
+                    <div class="gallery-photo">
+                        <img src="mtk-emas.jpeg" alt="Sertifikat Medali Emas Matematika" loading="lazy">
+                    </div>
+                    <div class="gallery-content">
+                        <span class="tag">PRESTASI</span>
+                        <h3>Medali Emas — Matematika</h3>
+                        <p>Airlangga Competition 11 — Tingkat Nasional, 2025.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <div class="gallery-photo">
+                        <img src="b.indo-emas.jpeg" alt="Sertifikat Medali Emas Bahasa Indonesia" loading="lazy">
+                    </div>
+                    <div class="gallery-content">
+                        <span class="tag">PRESTASI</span>
+                        <h3>Medali Emas — Bahasa Indonesia</h3>
+                        <p>Airlangga Competition 11 — Tingkat Nasional, 2025.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <div class="gallery-photo">
+                        <img src="mtkperak.jpg" alt="Sertifikat Medali Perak Matematika" loading="lazy">
+                    </div>
+                    <div class="gallery-content">
+                        <span class="tag">PRESTASI</span>
+                        <h3>Medali Perak — Matematika</h3>
+                        <p>Golden Student Olympiad — Tingkat Nasional, 2025.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <div class="gallery-photo">
+                        <img src="bnsp.jpeg" alt="Sertifikat Uji Kompetensi" loading="lazy">
+                    </div>
+                    <div class="gallery-content">
+                        <span class="tag">SERTIFIKASI</span>
+                        <h3>Teknisi Madya Jaringan Komputer</h3>
+                        <p>Uji Kompetensi dari BNSP, 2026.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <div class="gallery-photo">
+                        <img src="binus.jpeg" alt="Sertifikat Binus Ekskul" loading="lazy">
+                    </div>
+                    <div class="gallery-content">
+                        <span class="tag">PEMBELAJARAN</span>
+                        <h3>BINUS Online Ekskul — C Programming</h3>
+                        <p>Kegiatan pembelajaran dasar pemrograman C, 2026.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <div class="gallery-photo">
+                        <img src="kegiatan.jpg" alt="Foto Kegiatan" loading="lazy">
+                    </div>
+                    <div class="gallery-content">
+                        <span class="tag">MEMORIES</span>
+                        <h3>Kegiatan &amp; Pengalaman</h3>
+                        <p>Berbagai momen berharga selama masa sekolah.</p>
+                    </div>
+                </article>
+
             </div>
-        </a>
+        </section>
 
-    </div>
-    </section>
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="section">
 
-    
-<!-- BACK TO TOP -->
-<button id="backToTop" onclick="scrollToTop()">↑</button>
-
-
-<script>
-
-    // ================= MENU HAMBURGER =================
-
-    function toggleMenu() {
-        document.getElementById("menu").classList.toggle("show");
-    }
-
-  // ================= GALLERY POPUP =================
-
-const galleryImages = document.querySelectorAll(".gallery-photo img");
-
-let currentImage = 0;
-
-galleryImages.forEach(function(image, index) {
-    image.addEventListener("click", function() {
-        currentImage = index;
-
-        const popup = document.createElement("div");
-        popup.className = "image-popup";
-
-      popup.innerHTML = `
-            <div class="popup-content">
-                <button class="close-popup">✕</button>
-
-                <button class="gallery-prev">←</button>
-
-                <img src="${galleryImages[currentImage].src}"
-                     alt="${galleryImages[currentImage].alt}">
-
-                <button class="gallery-next">→</button>
+            <div class="section-head">
+                <p class="section-label">CONTACT</p>
+                <h2>Let's connect.</h2>
+                <p class="section-intro">
+                    Kalau ingin terhubung atau mengenal saya lebih dekat,
+                    kamu bisa menghubungi saya melalui email atau Instagram.
+                </p>
             </div>
-        `;
 
-      document.body.appendChild(popup);
+            <div class="contact-list">
 
-        const popupImage = popup.querySelector(".popup-content img");
+                <a href="mailto:ikaeftiana871@gmail.com" class="contact-card">
+                    <span class="icon-box">✉️</span>
+                    <div class="contact-info">
+                        <small>EMAIL</small>
+                        <h3>ikaeftiana871@gmail.com</h3>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
 
-        function showImage(index) {
-            currentImage = (index + galleryImages.length) % galleryImages.length;
+                <a href="https://instagram.com/ika_eftiana" target="_blank" rel="noopener" class="contact-card">
+                    <span class="icon-box">📷</span>
+                    <div class="contact-info">
+                        <small>INSTAGRAM</small>
+                        <h3>@ika_eftiana</h3>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
 
-            popupImage.src = galleryImages[currentImage].src;
-            popupImage.alt = galleryImages[currentImage].alt;
-          }
+            </div>
 
-      popup.querySelector(".gallery-prev").addEventListener("click", function() {
-            showImage(currentImage - 1);
-        });
+        </section>
 
-        popup.querySelector(".gallery-next").addEventListener("click", function() {
-            showImage(currentImage + 1);
-        });
+    </main>
 
-        popup.querySelector(".close-popup").addEventListener("click", function() {
-            popup.remove();
-        });
+    <footer class="footer">
+        <p>© 2026 Ika Eftiana. All rights reserved.</p>
+    </footer>
 
-        popup.addEventListener("click", function(event) {
-            if (event.target === popup) {
-                popup.remove();
-            }
-        });
-    });
-});
+    <!-- BACK TO TOP -->
+    <button id="backToTop" type="button" aria-label="Kembali ke atas">↑</button>
 
-    // ================= SCROLL ANIMATION =================
+    <script>
 
-    const sections = document.querySelectorAll(".section");
+        // ================= TEMA (DARK / LIGHT) =================
 
-    const sectionObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show-section");
-            }
-        });
-    }, {
-        threshold: 0.15
-    });
+        const root = document.documentElement;
+        const themeButton = document.getElementById("themeButton");
 
-    sections.forEach(function(section) {
-        sectionObserver.observe(section);
-    });
-
-
-    // ================= BACK TO TOP =================
-
-    const backToTop = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 400) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
+        function updateThemeIcon() {
+            // Tampilkan ikon tujuan: di mode gelap tampil ☀️, di mode terang tampil 🌙
+            themeButton.textContent =
+                root.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
         }
-    });
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        themeButton.addEventListener("click", function () {
+            const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            try { localStorage.setItem("theme", next); } catch (e) { }
+            updateThemeIcon();
         });
-    }
 
-  // ================= DARK MODE =================
+        updateThemeIcon();
 
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
+        // ================= MENU HAMBURGER =================
 
-    const button = document.querySelector(".dark-button");
+        const menu = document.getElementById("menu");
+        const menuButton = document.getElementById("menuButton");
 
-    if (document.body.classList.contains("dark-mode")) {
-        button.textContent = "☀️";
-    } else {
-        button.textContent = "🌙";
-    }
-          }
+        function setMenu(open) {
+            menu.classList.toggle("show", open);
+            menuButton.setAttribute("aria-expanded", open);
+            menuButton.textContent = open ? "✕" : "☰";
+        }
 
-    // ================= HALAMAN SELESAI DIMUAT =================
+        menuButton.addEventListener("click", function () {
+            setMenu(!menu.classList.contains("show"));
+        });
 
-    window.addEventListener("load", function() {
-        console.log("Portfolio Ika berhasil dimuat!");
-    });
+        menu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () { setMenu(false); });
+        });
 
-</script>
+        // Tutup menu saat klik di luar header
+        document.addEventListener("click", function (event) {
+            if (!document.getElementById("header").contains(event.target)) {
+                setMenu(false);
+            }
+        });
+
+        // Tutup menu otomatis saat layar melebar ke desktop
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 820) setMenu(false);
+        });
+
+        // ================= HEADER SAAT SCROLL =================
+
+        const header = document.getElementById("header");
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+            header.classList.toggle("scrolled", window.scrollY > 20);
+            backToTop.classList.toggle("show", window.scrollY > 400);
+        });
+
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // ================= MENU AKTIF SAAT SCROLL =================
+
+        const navLinks = document.querySelectorAll(".menu a");
+        const trackedSections = document.querySelectorAll("main section[id]");
+
+        const activeObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function (link) {
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute("href") === "#" + entry.target.id
+                        );
+                    });
+                }
+            });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+
+        trackedSections.forEach(function (s) { activeObserver.observe(s); });
+
+        // ================= ANIMASI SCROLL =================
+
+        const revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show-section");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll(".section").forEach(function (s) {
+            revealObserver.observe(s);
+        });
+
+        // ================= GALLERY POPUP =================
+
+        const galleryImages = document.querySelectorAll(".gallery-photo img");
+        let currentImage = 0;
+
+        galleryImages.forEach(function (image, index) {
+            image.addEventListener("click", function () {
+                currentImage = index;
+
+                const popup = document.createElement("div");
+                popup.className = "image-popup";
+                popup.innerHTML =
+                    '<div class="popup-content">' +
+                    '<button class="close-popup" aria-label="Tutup">✕</button>' +
+                    '<button class="gallery-prev" aria-label="Sebelumnya">←</button>' +
+                    '<img src="' + image.src + '" alt="' + image.alt + '">' +
+                    '<button class="gallery-next" aria-label="Berikutnya">→</button>' +
+                    '</div>';
+
+                document.body.appendChild(popup);
+                document.body.style.overflow = "hidden";
+
+                const popupImage = popup.querySelector("img");
+
+                function showImage(i) {
+                    currentImage = (i + galleryImages.length) % galleryImages.length;
+                    popupImage.src = galleryImages[currentImage].src;
+                    popupImage.alt = galleryImages[currentImage].alt;
+                }
+
+                function closePopup() {
+                    popup.remove();
+                    document.body.style.overflow = "";
+                    document.removeEventListener("keydown", onKey);
+                }
+
+                function onKey(e) {
+                    if (e.key === "Escape") closePopup();
+                    if (e.key === "ArrowLeft") showImage(currentImage - 1);
+                    if (e.key === "ArrowRight") showImage(currentImage + 1);
+                }
+
+                document.addEventListener("keydown", onKey);
+
+                popup.querySelector(".gallery-prev").addEventListener("click", function () {
+                    showImage(currentImage - 1);
+                });
+                popup.querySelector(".gallery-next").addEventListener("click", function () {
+                    showImage(currentImage + 1);
+                });
+                popup.querySelector(".close-popup").addEventListener("click", closePopup);
+                popup.addEventListener("click", function (e) {
+                    if (e.target === popup) closePopup();
+                });
+            });
+        });
+
+    </script>
 
 </body>
-  </html>
+
+</html>
